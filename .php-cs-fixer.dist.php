@@ -1,5 +1,12 @@
 <?php
 
+$finder = Symfony\Component\Finder\Finder::create()
+    ->in([
+        __DIR__.'/src',
+    ])
+    ->name('*.php')
+    ->notName('*.blade.php');
+
 return (new PhpCsFixer\Config())
     ->setRules([
         '@PSR12' => true,
@@ -32,4 +39,5 @@ return (new PhpCsFixer\Config())
             ],
         ],
         'no_singleline_whitespace_before_semicolons' => true,
-    ]);
+    ])
+    ->setFinder($finder);
