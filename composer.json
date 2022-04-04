@@ -1,0 +1,38 @@
+{
+    "name": "pkboom/laravel-grab",
+    "description": "Find artisan commands interactively",
+    "keywords": [
+        "pkboom",
+        "laravel",
+        "grab"
+    ],
+    "homepage": "https://github.com/pkboom/laravel-grab",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Keunbae Park",
+            "email": "ppotpo@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^8.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Pkboom\\Grab\\": "src"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Pkboom\\Grab\\GrabServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
